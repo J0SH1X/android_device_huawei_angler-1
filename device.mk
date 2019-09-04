@@ -30,11 +30,13 @@ PRODUCT_COPY_FILES += \
     device/huawei/angler/fstab.angler:root/fstab.angler \
     device/huawei/angler/ueventd.angler.rc:root/ueventd.angler.rc \
     device/huawei/angler/init.recovery.angler.rc:root/init.recovery.angler.rc \
-    device/huawei/angler/init.angler.power.sh:system/bin/init.angler.power.sh \
+    device/huawei/angler/init.angler.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.power.sh \
     device/huawei/angler/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
     device/huawei/angler/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
     device/huawei/angler/init.qcom.devwait.sh:system/bin/init.qcom.devwait.sh \
     device/huawei/angler/init.qcom.devstart.sh:system/bin/init.qcom.devstart.sh
+    device/huawei/angler/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
+    device/huawei/angler/init.qcom.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devstart.sh
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_COPY_FILES += \
@@ -45,10 +47,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/init.mcfg.sh:system/bin/init.mcfg.sh
+    device/huawei/angler/init.mcfg.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mcfg.sh
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/init.radio.sh:system/bin/init.radio.sh
+    device/huawei/angler/init.radio.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.radio.sh
 
 # Thermal configuration
 PRODUCT_COPY_FILES += \
@@ -161,7 +163,7 @@ PRODUCT_COPY_FILES += \
 
 # Qseecomd configuration file
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/init.angler.qseecomd.sh:system/bin/init.angler.qseecomd.sh
+    device/huawei/angler/init.angler.qseecomd.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.qseecomd.sh
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
