@@ -133,7 +133,7 @@
 /vendor/bin/ims_rtp_daemon               u:object_r:ims_exec:s0
 /vendor/bin/init\.angler\.power\.sh      u:object_r:init-power-sh_exec:s0
 /vendor/bin/init\.angler\.qseecomd\.sh   u:object_r:init-angler-qseecomd-sh_exec:s0
-/vendorm/bin/init\.qcom\.devstart\.sh     u:object_r:init-qcom-devstart-sh_exec:s0
+/vendor/bin/init\.qcom\.devstart\.sh     u:object_r:init-qcom-devstart-sh_exec:s0
 /vendor/bin/init\.qcom\.devwait\.sh      u:object_r:init-qcom-devwait-sh_exec:s0
 /vendor/bin/init\.mcfg\.sh               u:object_r:init-mcfg-sh_exec:s0
 /vendor/bin/init\.radio\.sh              u:object_r:init-radio-sh_exec:s0
