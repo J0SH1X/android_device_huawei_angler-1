@@ -235,6 +235,10 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-impl \
     android.hardware.soundtrigger@2.0-impl
 
+PRODUCT_PACKAGES += \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.effect@5.0-impl \
+
 #CAMERA
 PRODUCT_PACKAGES += \
     camera.device@3.2-impl \
