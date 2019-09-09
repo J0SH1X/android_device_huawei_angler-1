@@ -255,11 +255,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-impl \
     android.hardware.graphics.composer@2.1-service
 
-# Configstore HAL
-PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service
-    android.hardware.configstore@1.0-impl
-
 # Sensor & activity_recognition HAL
 TARGET_USES_NANOHUB_SENSORHAL := true
 NANOHUB_SENSORHAL_LID_STATE_ENABLED := true
