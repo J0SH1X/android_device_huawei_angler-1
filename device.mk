@@ -33,8 +33,6 @@ PRODUCT_COPY_FILES += \
     device/huawei/angler/init.angler.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.power.sh \
     device/huawei/angler/uinput-fpc.kl:system/usr/keylayout/uinput-fpc.kl \
     device/huawei/angler/uinput-fpc.idc:system/usr/idc/uinput-fpc.idc \
-    device/huawei/angler/init.qcom.devwait.sh:system/bin/init.qcom.devwait.sh \
-    device/huawei/angler/init.qcom.devstart.sh:system/bin/init.qcom.devstart.sh
     device/huawei/angler/init.qcom.devwait.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devwait.sh \
     device/huawei/angler/init.qcom.devstart.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.devstart.sh
 
@@ -67,6 +65,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
+    device/huawei/angler/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt \
     device/huawei/angler/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
     device/huawei/angler/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     device/huawei/angler/mixer_paths.xml:system/etc/mixer_paths.xml \
