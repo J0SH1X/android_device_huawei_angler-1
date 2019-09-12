@@ -156,6 +156,8 @@ on boot
     chmod 0644 /sys/kernel/debug/tracing/trace_marker
     chown webview_zygote webview_zygote /sys/kernel/debug/tracing/trace_marker
 
+    setprop vold.decrypt trigger_restart_framework
+
 on property:init.svc.per_mgr=running
     start per_proxy
 
