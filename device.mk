@@ -484,7 +484,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Default OMX service to non-Treble
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.media.treble_omx=false
+    persist.media.treble_omx=true
 
 # Enable AAC 5.1 output
 PRODUCT_PROPERTY_OVERRIDES += \
