@@ -25,11 +25,11 @@ TARGET_USES_CHINOOK_SENSORHUB := false
 PRODUCT_SHIPPING_API_LEVEL := 23
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/init.angler.rc:root/init.angler.rc \
-    device/huawei/angler/init.angler.usb.rc:root/init.angler.usb.rc \
-    device/huawei/angler/fstab.angler:root/fstab.angler \
-    device/huawei/angler/ueventd.angler.rc:root/ueventd.angler.rc \
-    device/huawei/angler/init.recovery.angler.rc:root/init.recovery.angler.rc \
+    device/huawei/angler/init.angler.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.rc \
+    device/huawei/angler/init.angler.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.usb.rc \
+    device/huawei/angler/fstab.angler:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.angler \
+    device/huawei/angler/ueventd.angler.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/ueventd.angler.rc \
+    device/huawei/angler/init.recovery.angler.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.recovery.angler.rc \
     device/huawei/angler/init.angler.power.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.angler.power.sh \
     device/huawei/angler/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
     device/huawei/angler/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc \
@@ -38,10 +38,10 @@ PRODUCT_COPY_FILES += \
 
 ifeq ($(TARGET_USES_CHINOOK_SENSORHUB),true)
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/init.angler.sensorhub.rc:root/init.angler.sensorhub.rc
+    device/huawei/angler/init.angler.sensorhub.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.sensorhub.rc
 else
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/init.angler.nanohub.rc:root/init.angler.sensorhub.rc
+    device/huawei/angler/init.angler.nanohub.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.angler.sensorhub.rc
 endif
 
 PRODUCT_COPY_FILES += \
