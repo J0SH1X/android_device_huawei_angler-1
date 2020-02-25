@@ -56,12 +56,12 @@ PRODUCT_COPY_FILES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_google_video.xml \
-    device/huawei/angler/media_codecs.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs.xml \
-    device/huawei/angler/media_codecs_performance.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_codecs_performance.xml \
-    device/huawei/angler/media_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/media_profiles.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
+    device/huawei/angler/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    device/huawei/angler/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    device/huawei/angler/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -81,9 +81,9 @@ PRODUCT_COPY_FILES += \
 
 # Input device files
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
-    device/huawei/angler/qpnp_pon.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/qpnp_pon.kl \
-    device/huawei/angler/synaptics_dsx.idc:$(TARGET_COPY_OUT_SYSTEM)/usr/idc/synaptics_dsx.idc
+    device/huawei/angler/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    device/huawei/angler/qpnp_pon.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/qpnp_pon.kl \
+    device/huawei/angler/synaptics_dsx.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/synaptics_dsx.idc
 
 # for launcher layout
 #PRODUCT_PACKAGES += \
@@ -109,11 +109,11 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/bcmdhd.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd.cal \
-    device/huawei/angler/bcmdhd-pme.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-pme.cal \
-    device/huawei/angler/bcmdhd-high.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-high.cal \
-    device/huawei/angler/bcmdhd-low.cal:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/bcmdhd-low.cal \
-    device/huawei/angler/filter_ie:$(TARGET_COPY_OUT_SYSTEM)/etc/wifi/filter_ie
+    device/huawei/angler/bcmdhd.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd.cal \
+    device/huawei/angler/bcmdhd-pme.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd-pme.cal \
+    device/huawei/angler/bcmdhd-high.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd-high.cal \
+    device/huawei/angler/bcmdhd-low.cal:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bcmdhd-low.cal \
+    device/huawei/angler/filter_ie:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/filter_ie
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -359,8 +359,8 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
-    device/huawei/angler/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nxp.conf
+    device/huawei/angler/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
+    device/huawei/angler/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 DEVICE_PACKAGE_OVERLAYS := \
     device/huawei/angler/overlay
@@ -570,7 +570,7 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4358
 
 # GPS configuration
 PRODUCT_COPY_FILES += \
-    device/huawei/angler/gps.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/gps.conf:qcom
+    device/huawei/angler/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf:qcom
 
 # services for encryption
 PRODUCT_PACKAGES += \
