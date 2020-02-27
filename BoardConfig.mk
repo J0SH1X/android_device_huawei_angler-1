@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+BUILD_BROKEN_DUP_RULES := true
+
 TARGET_BOARD_PLATFORM := msm8994
 TARGET_BOOTLOADER_BOARD_NAME := angler
 
@@ -43,7 +46,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
 BOARD_KERNEL_CMDLINE := androidboot.hardware=angler androidboot.console=ttyHSL0 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3 no_console_suspend swiotlb=2048
-BOARD_KERNEL_CMDLINE += loop.max_part=7
+BOARD_KERNEL_CMDLINE += loop.max_part=7 androidboot.selinux=permissive
 # system-as-root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0
@@ -110,8 +113,12 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 104857600
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-BOARD_VENDORIMAGE_PARTITION_SIZE := 1023410176
-BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE    := ext4
+
+BOARD_VENDORIMAGE_PARTITION_SIZE := 209715200
+BOARD_VENDORIMAGE_EXTFS_INODE_COUNT   := 4096
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE    := squashfs
+BOARD_VENDORIMAGE_JOURNAL_SIZE        := 0
+BOARD_VENDORIMAGE_SQUASHFS_COMPRESSOR := lz4
 
 # Use mke2fs to create ext4 images
 TARGET_USES_MKE2FS := true
@@ -123,9 +130,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_RELEASETOOLS_EXTENSIONS := device/huawei/angler
 
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist
-
-BOARD_SEPOLICY_DIRS += \
-	device/huawei/angler/sepolicy
 
 TARGET_USES_64_BIT_BINDER := true
 

@@ -580,8 +580,7 @@ PRODUCT_COPY_FILES += \
 
 # services for encryption
 PRODUCT_PACKAGES += \
-    gatekeeper.msm8994 \
-    keystore.msm8994
+    gatekeeper.msm8994
 
 # general support
 PRODUCT_PACKAGES += \
